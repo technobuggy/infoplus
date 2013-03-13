@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<BorderPane id="background" prefHeight="640.0" prefWidth="325.0" xmlns:fx="http://javafx.com/fxml" fx:controller="GUI.completeGUI.CompleteGUIController">
+  <bottom>
+    <ToolBar>
+      <items>
+        <HBox alignment="CENTER" prefWidth="313.0" styleClass="segmented-button-bar">
+          <Button fx:id="btnOpslaan" onAction="#saveNotificaton" styleClass="first" text="Opslaan" />
+          <Button fx:id="btnFacebook" onAction="#postToFacebook" styleClass="segmented-button-bar" text="Facebook" />
+          <Button disable="true" styleClass="first, last" text="Tweet" />
+        </HBox>
+      </items>
+      <stylesheets>
+        <URL value="@completegui.css" />
+      </stylesheets>
+    </ToolBar>
+  </bottom>
+  <center>
+    <Accordion>
+      <expandedPane>
+        <TitledPane fx:id="x2" animated="false" text="Wat?">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TextArea fx:id="txtOmschrijving" prefHeight="237.0" prefWidth="288.0" promptText="Omschrijving" wrapText="true" AnchorPane.bottomAnchor="265.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="42.0" />
+                <ComboBox fx:id="cbxType" prefHeight="21.0" prefWidth="289.0" promptText="Kies een type" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="14.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="Item 1" />
+                      <String fx:value="Item 2" />
+                      <String fx:value="Item 3" />
+                    </FXCollections>
+                  </items>
+                </ComboBox>
+                <Button mnemonicParsing="false" onAction="#voegAfbeeldingToe" prefWidth="289.0" text="Voeg een afbeelding toe" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="19.0" />
+                <ImageView fx:id="imageView" fitHeight="223.0" fitWidth="288.0" layoutX="14.0" layoutY="279.0" pickOnBounds="true">
+                  <image>
+                    <Image url="file:/F:/no_image.gif" preserveRatio="false" smooth="false" />
+                  </image>
+                </ImageView>
+              </children>
+            </AnchorPane>
+          </content>
+        </TitledPane>
+      </expandedPane>
+      <panes>
+        <TitledPane fx:id="x1" animated="false" text="Waar?">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TabPane prefHeight="384.0" prefWidth="272.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <tabs>
+                    <Tab closable="false" text="Maps">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                            <WebView fx:id="mapViewBrowser" prefHeight="513.0" prefWidth="321.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </Tab>
+                    <Tab closable="false" text="Adres">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="page">
+                          <children>
+                            <VBox id="VBox" prefHeight="124.0" spacing="30.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+                              <children>
+                                <Label text="Gemeente:" />
+                                <Label text="Straat:" />
+                                <Label text="Nummer:" />
+                              </children>
+                            </VBox>
+                            <VBox id="VBox" prefHeight="107.0" prefWidth="170.0" spacing="25.0" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="14.0">
+                              <children>
+                                <TextField fx:id="txtGemeente" minHeight="20.0" prefWidth="200.0" text="Aalst" />
+                                <TextField fx:id="txtStraat" minHeight="20.0" prefWidth="200.0" text="Arbeidstraat" />
+                                <TextField fx:id="txtNr" minHeight="20.0" prefWidth="200.0" text="2" />
+                              </children>
+                            </VBox>
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </Tab>
+                  </tabs>
+                </TabPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </TitledPane>
+        <fx:reference source="x2" />
+      </panes>
+    </Accordion>
+  </center>
+  <stylesheets>
+    <URL value="@completegui.css" />
+  </stylesheets>
+</BorderPane>

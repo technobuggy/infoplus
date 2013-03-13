@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="325.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="GUI.welcome.WelcomeController">
+  <children>
+    <ImageView fitHeight="640.0" fitWidth="324.9999694824219" pickOnBounds="true">
+      <image>
+        <Image url="@../../media/startscherm.jpg" preserveRatio="false" smooth="false" />
+      </image>
+    </ImageView>
+    <Button contentDisplay="CENTER" layoutX="93.0" layoutY="545.0" mnemonicParsing="false" onAction="#toonApp" text="Cool, laat maar komen" />
+  </children>
+  <stylesheets>
+    <URL value="@welcome.css" />
+  </stylesheets>
+</AnchorPane>

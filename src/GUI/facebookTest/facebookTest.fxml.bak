@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="533.0" prefWidth="374.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="GUI.facebookTest.FacebookTestController">
+  <children>
+    <ToolBar prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <items>
+        <Label fx:id="lblStatus" text="Label" />
+      </items>
+    </ToolBar>
+    <Label text="Type" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="14.0" />
+    <ComboBox fx:id="cbxType" prefHeight="21.0" prefWidth="243.0" AnchorPane.leftAnchor="82.0" AnchorPane.rightAnchor="49.0" AnchorPane.topAnchor="12.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label text="Stad" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="49.0" />
+    <TextField fx:id="txtStad" prefWidth="243.0" AnchorPane.leftAnchor="82.0" AnchorPane.rightAnchor="49.0" AnchorPane.topAnchor="46.0" />
+    <Label text="Straat" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="71.0" />
+    <TextField fx:id="txtStraat" prefWidth="243.0" AnchorPane.leftAnchor="82.0" AnchorPane.rightAnchor="49.0" AnchorPane.topAnchor="68.0" />
+    <Label text="Nr" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="90.0" />
+    <TextField fx:id="txtNR" prefWidth="28.0" AnchorPane.leftAnchor="82.0" AnchorPane.topAnchor="90.0" />
+    <Label layoutX="26.0" layoutY="119.0" text="Description" />
+    <TextArea fx:id="txtDescription" prefHeight="339.0" prefWidth="336.0" wrapText="true" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="135.0" />
+    <Button fx:id="btnPost" mnemonicParsing="false" onAction="#postToFacebook" text="Post to facebook" AnchorPane.bottomAnchor="32.0" AnchorPane.rightAnchor="14.0" />
+    <Button fx:id="btnSave" layoutX="192.0" layoutY="480.0" mnemonicParsing="false" onAction="saveToDatabase" text="Save" />
+  </children>
+  <stylesheets>
+    <URL value="@facebooktest.css" />
+  </stylesheets>
+</AnchorPane>
