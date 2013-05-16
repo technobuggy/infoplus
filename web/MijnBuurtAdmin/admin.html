@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="lib/jquery.cookie.js"></script>
+<script src="js/admin.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>InfoPlus&#0153; MijnBuurt&#0169; </title>
+        <link href="css/admin.css" rel="stylesheet" />
+        <link href="css/main.css" rel="stylesheet" />
+    </head>
+    <body>
+        <nav>
+            Gebruiker: <span id="userId">geenGebruiker</span>
+            Gemeente: <span id="gemeente">9300</span>
+            Notificaties: <span>
+                <a onclick="setView(0)"href="#">statistieken </a> |
+                <a onclick="setView(1)" href="#">ongepubliceerde</a>|
+                <a onclick="setView(2)" href="#">alle</a>|
+                <a onclick="setView(3)" href="#">gepubliceerde</a>
+            </span>
+            <span>
+                <a onclick="logOff()" href="#">afmelden</a>
+            </span>
+        </nav>
+        <div id="notifications">
+
+        </div>
+        <article id="overview">
+            <h1>Statistieken voor Aalst</h1>
+            <h2>Laatste notificatie: </h2>
+            !lastNotification
+            <h2>Publicatie status</h2>
+            <table class="percentageGraph">
+                <tr>
+                    <td class ="pub" style="width:!publishedPerc%">Gepubliceerd: !published</td>
+                    <td class ="unpub" style="width:!unpublishedPerc%">Ongepubliceerd: !unpublished</td>
+                </tr>
+            </table>
+            <table class ="notifications overview">
+                <tr>
+                    <th>
+                        <img src="../MijnBuurtApp/img/icon/marker/Gevaarlijke situatie.png" alt="Gevaarlijke situatie"/>
+                    </th>
+                    <td>
+                        <table class="percentageGraph">
+                            <td class="severe" style="width:!dangerousSituationPerc%">!dangerousSituation</td>
+                            <td></td>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <img src="../MijnBuurtApp/img/icon/marker/Actie in uw buurt.png" alt="Actie in uw buurt"/>
+                    </th>
+                    <td>
+                        <table class="percentageGraph">
+                            <td class="problematic" style="width:!neighboorhoodActionPerc%">!neighboorhoodAction</td>
+                            <td></td>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <img src="../MijnBuurtApp/img/icon/marker/Probleem met het wegdek.png" alt="Probleem met het wegdek"/>
+                    </th>
+                    <td>
+                        <table class="percentageGraph">
+                            <td class="problematic" style="width:!roadsurfacePerc%">!roadsurface</td>
+                            <td></td>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <img src="../MijnBuurtApp/img/icon/marker/Vuil op de weg.png" alt="Vuil op de weg"/>
+                    </th>
+                    <td>
+                        <table class="percentageGraph">
+                            <td class="problematic" style="width:!litterPerc%">!litter</td>
+                            <td></td>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <img src="../MijnBuurtApp/img/icon/marker/Evenement in uw buurt.png" alt="Evenement"/>
+                    </th>
+                    <td>
+                        <table class="percentageGraph">
+                            <td class="positive" style="width:!neighboorhoudEventPerc%">!neighboorhoudEvent</td>
+                            <td></td>
+                        </table>
+                    </td>
+                </tr>
+                </tr>
+            </table>
+        </article>
+        <article id="dbTools">
+            <h1>Database Tools</h1>
+            <h2>Verwijderen op datum</h2>
+            <div id="dbToolsSlider" style="margin:0px 20px;">
+                Alle notificaties voor <span id="dbToolsDate">--</span> verwijderen:
+                <input type="range" min="0" max="!dateCount" id="dbToolsRangeSlider" steps="1"/>
+                <input type="button" value="Verwijderen" onClick="removeBefore()" />
+                <span id="beforeStatus">-</span>
+            </div>
+        </article>
+        <article id="developer">
+            <h1>Developer Tools</h1>
+            <h2>Dummies toevoegen</h2>
+            <form>
+                Aantal:<br />
+                <input type="number" min="1" id="DummyCount" required style="width: 50px"/><br />
+                Gemeente:<br />
+                <input type="text" pattern="[a-zA-Z]" id="DummyGemeente" required style="width: 200px"/><br />
+                <input type="button" value="Toevoegen" onClick="addDummies()" /> <br />
+                <input type="button" value="Alle dummies verwijderen" onClick="removeDummies()" /><br />
+                <span id="dummyStatus">-</span>
+            </form>
+        </article>
+    </body>
+
+</html>

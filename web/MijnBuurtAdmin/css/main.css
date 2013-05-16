@@ -1,0 +1,17 @@
+﻿* {
+    margin: 0px;
+}
+body {
+    font-family: tahoma;
+
+}
+input{
+    width: 100%;
+}
+input[type="email"], input[type="password"] {
+    width: 97%;
+}
+
+table {
+    width: 100%;
+}

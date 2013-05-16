@@ -1,0 +1,383 @@
+/*
+Sticky Footer by Ryan Fait
+http://ryanfait.com/
+*/
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+    width: 100%;
+	font-family: 'Tahoma', serif;
+    color: black;
+    background:
+        -webkit-gradient(linear, center bottom, center top, from(#555555), to(#151515));
+    overflow: hidden;
+    font-size: 1.4em;
+}
+    button {
+        margin: 5px 0px;
+        background: none;
+        border: 1px solid cornsilk;
+        width: 100%;
+        color: cornsilk;
+        font-family: 'Lato', sans-serif;
+
+        height: 32px;
+        text-shadow: 0px 0px 2px black;
+    }
+    button:hover {
+        background-color: cornsilk;
+        color: black;
+        cursor: pointer;
+    }
+    header {
+        height: 40px;
+    }
+ul {
+    list-style-type: none;
+}
+th, td {
+    text-align: left;
+}
+p{
+	margin: 0 0px 10px 5px;
+}
+input,select {
+    width: 100%;
+}
+input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+}
+label {
+    font-size: 0.7em;
+    text-decoration: underline;
+    padding: 12px 0px;
+    color: cornsilk;
+}
+fieldset {
+    background: 
+        -webkit-gradient(linear, center bottom, center top, from(#151515), to(#555555));
+    border: 1px solid cornsilk;
+    border-radius: 2px;
+    margin: 0px 2% 5px 2%;
+    color: black;
+}
+legend {
+    background-color: cornsilk;
+    border-radius: 3px;
+    font-size: 0.8em;
+    color: #151515;
+    padding: 3px;
+}
+section {
+
+}
+textarea {
+    border-radius: 3px;
+    background-color: cornsilk;
+	font-family: 'Tahoma', serif;
+
+}
+h1{
+	color:#FFF;
+	font-size: 1.3em;
+	font-family: 'Lato', sans-serif;
+	text-transform:capitalize;
+    font-weight: bold;
+	margin: 4px 7px;
+    text-shadow: 0px 0px 5px black;
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
+	
+	text-align:center;
+	font-size: 0.8em;
+}
+nav, .push {
+	height: 100px; /* .push must be the same height as .footer */
+}
+nav{
+    position: absolute;
+    bottom: 0px;
+	z-index: 5;
+	width: 100%;
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-pack: justify;
+    padding-top: 10px;
+	background: -webkit-gradient(linear, center top, center bottom, from(#303030), to(#151515));
+}
+/*^--------------------------------------------------------------------------------------------------google overriden*/
+/*drop down menu bij places*/
+.pac-container {
+    color: black;
+}
+/*tekstballon bij markers*/
+.infoWindow {
+    font-size: 0.5em;
+    text-align: left;
+}
+.infoWindow > h2 {
+    color: black;
+	font-size: 1.2em;
+	font-family: 'Lato', sans-serif;
+	text-transform:capitalize;
+    font-weight: bold;
+	margin: 4px 0px;
+}
+.infoWindow > table {
+    width: 100%;
+    margin-top: 5px;
+}
+.infoWindow img {
+    width: 24px;
+    /*background-color: red;*/
+}
+.appreciation {
+    text-align: right;
+    border: 1px solid gray;
+    border-radius: 3px;
+    
+}
+.appreciationValue {
+    min-width: 20px;
+    width: 100%;
+    font-size: 1em;
+    text-align: center;
+}
+
+/*^--------------------------------------------------------------------------------------------------navigation buttons*/
+nav > div{
+	-webkit-box-flex: 1;
+	margin: 4px;
+	text-align: center;
+}
+
+nav > div > button {
+    font-size: 2em;
+    text-align: left;
+}
+nav > div > img {
+	max-width: 64px;
+}
+nav > div:hover {
+	
+}
+.disabled{
+	opacity:0.2;	
+	box-shadow: 0px 0px 0px rgba(255,255,255,0.7);
+    background: -webkit-gradient(linear, center top, center bottom, from(#303030), to(#151515));
+}
+
+/*^--------------------------------------------------------------------------------------------------panels*/
+.main{
+	background: -webkit-gradient(linear, center bottom, center top, from(#c3a975), to(#d4c3a0));
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.8);
+	margin-top: 5px;
+	margin-left: 2%;
+    margin-right: 2%;
+    width: 96%;
+	height: 90%;
+	-webkit-box-flex:1;
+	overflow:hidden;
+    font-size: 1em;
+    text-align: left;
+     
+}
+.arrowLeft {
+    position: absolute;
+    width: 30px;
+    height: 52px;
+    bottom: 26px;
+    margin-top: -32px;
+    z-index: 10;
+    background-image: url("../img/icon/buttons/arrowL.png");
+}
+.arrowRight {
+    position: absolute;
+    width: 30px;
+    height: 52px;
+    bottom: 26px;
+    right: 0px;
+    margin-top: -32px;
+    z-index: 10;
+    background-image: url("../img/icon/buttons/arrowR.png");
+}
+.arrowLeft:hover, .arrowRight:hover {
+          -webkit-filter: invert(100%);  
+ }
+.menuPreview {
+    vertical-align: middle;
+    background: -webkit-gradient(linear, center top, center bottom, from(#303030), to(#151515));
+    border-radius: 5px;
+
+}
+/*kwaliteitsverlies op het logo voorkomen*/
+.iplusLogo {
+    width: 100%;
+    max-width: 800px;
+    max-height: 150px;
+}
+.centerBox {
+    text-align: center;
+
+}
+/*^--------------------------------------------------------------------------------------------------popup menu*/
+/*main*/
+.popupMenu{
+    background-color: rgba(0, 0, 0, 0.7);
+    	box-shadow: 0px 0px 20px rgba(0,0,0,1);
+	text-align:left;
+    font-size: 1.3em;
+	padding-top:5px;
+    padding-bottom: 10px;
+	display:none;
+	position:absolute;
+	bottom:110px;
+	width:100%;
+	z-index: 500;	
+}
+/*position specifics
+.leftMenu{
+	border-top-left-radius: 20px;	
+    left:0px;
+}
+.centerMenu{
+	left:33.5%;	
+}
+.rightMenu{
+    border-top-right-radius: 20px;
+    left: 67%;
+}
+    */
+/*buttons*/
+.popupMenu > div{
+	font-family: 'Lato', sans-serif;
+	width:100%;
+    min-height: 20px;
+	cursor: pointer;
+    color: cornsilk;
+    padding: 3px 2px 0px 2px;
+}
+.popupMenu > div:first-child {
+    margin-top: 20px;
+}
+.popupMenu > div:hover {
+    background-color: rgba(255,248,220,0.8); /*cornsilk transparent*/
+    color: #151515;
+}
+.popupMenu > div:hover > img{
+     -webkit-filter: invert(100%);  
+}
+.popupMenu > div > img{
+	height: 32px;
+    margin-right: 10px;
+	vertical-align:middle;
+}
+/*subMenu*/
+.subMenu {
+	/*display:none;*/
+}
+/*^--------------------------------------------------------------------------------------------------fullscreen popup*/
+.fullScreenPopup {
+    position: absolute;
+    display: none;
+    bottom: 100px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 20px black;
+    z-index: 4;
+    text-align: left;
+    color: cornsilk;
+    padding-top: 20px;
+}
+    .fullScreenPopup select {
+        width: 100%;
+        min-width: 100%;
+    }
+    .fullScreenPopup textarea {
+        width: 97%;
+        max-width: 97%;
+        border-radius:0px;
+        background-color: white;
+    }
+
+    /*^--------------------------------------------------------------------------------------------------fullscreen popup v2*/
+.fullScreenPopupV2 {
+    display: none;
+    width: 100%;
+    background: 	
+        -webkit-gradient(linear, center bottom, center top, from(#303030), to(#151515));
+        text-align: left;
+    color: cornsilk;
+    padding-top: 20px;
+
+}
+    .fullScreenPopupV2 select {
+        width: 100%;
+        min-width: 100%;
+    }
+    .fullScreenPopupV2 textarea {
+        width: 97%;
+        max-width: 97%;
+        border-radius:0px;
+        background-color: white;
+    }
+    /*.fullScreenPopupV2 button {
+        margin: 5px 0px;
+        background: none;
+        border: none;
+        width: 100%;
+        color: cornsilk;
+        font-family: 'Lato', sans-serif;
+    }
+    .fullScreenPopupV2 button:hover {
+        background-color: cornsilk;
+        color: black;
+        cursor: pointer;
+    }*/
+#closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-color: crimson;
+    color: cornsilk;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    font-size: 13px;
+}
+#closeButton:hover{
+    box-shadow: -1px 1px 20px crimson;
+}
+/*^--------------------------------------------------------------------------------------------------maps*/
+#map_canvas {
+    overflow: visible;
+    width: 100%;
+    margin: 0px;
+    border: 2px solid darkslategrey;
+}
+/*^--------------------------------------------------------------------------------------------------js classes
+deze klassen dienen enkel voor javascript implementaties*/
+.volatile{/*Deze items verdwijnen op kleine schermen*/}
+.fullScreen{/*Javascript vergroot deze vensters dynamisch*/}
+.semiFullScreen{/*Javascript vergroot deze vensters dynamisch*/}
+
+.hideOnStart {
+    display: none;
+}
+
+#listView {
+    -webkit-overflow-scrolling: auto;
+}

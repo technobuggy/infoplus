@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>MijnBuurt&#0169; login</title>
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/login.css" rel="stylesheet" />
+</head>
+    <body>
+        <div id="login">
+        
+            <form>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="userName">Gebruikersnaam:</label>
+                        </td>
+                        <td>
+                            <input type="email" id="userName"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password">Wachtwoord:</label>
+                        </td>
+                        <td>
+                            <input type="password" id="password"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" id="submit"
+                                   onclick="submitForm()" value="Inloggen"/>
+                        </td>
+                        <td>
+                            <input type="reset"/>
+                        </td>
+                    </tr>
+                </table>
+                <span id="response">&nbsp;</span>
+            </form>
+            <img src="img/infopluslogo.png"/>
+        </div>
+    </body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="lib/jquery.cookie.js"></script>
+<script src="js/login.js"></script>
+</html>
